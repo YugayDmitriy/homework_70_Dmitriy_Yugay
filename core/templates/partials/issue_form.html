@@ -1,0 +1,18 @@
+{% load crispy_forms_tags %}
+    <div class="form-row">
+      <div class="form-group col-md-12 mt-4">
+        {{ form.summary|as_crispy_field }}
+      </div>
+    </div>
+    {{ form.description|as_crispy_field }}
+    <div class="form-row">
+      <div class="form-group col-md-5 mb-0">
+        {{ form.status|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-6 pl-4">
+        {{ form.type|as_crispy_field }}
+      </div>
+    </div>
+    <div class="form-group text-center mt-3">
+        <button type="submit" class="button"><i class="ri-check-line icon"></i><span class="text">{{ button_text }}</span></button>
+    </div>

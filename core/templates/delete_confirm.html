@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+	<div class="modal-body">
+		<p>Are you sure you want to delete these Records?</p>
+			<p class="text-warning"><small>После удаления, не возможно восстановить данные</small></p>
+				<div class="modal-footer">
+					<form action="{% url 'delete_issue' issue_delete.pk %}" method="POST">
+					{% csrf_token %}
+					<a href="{% url 'index' %}" class="btn btn-warning">Отменить</a>
+					<input type="submit" class="btn btn-danger" value="Удалить">
+					</form>
+				</div>
+		</div>
+{% endblock %}
