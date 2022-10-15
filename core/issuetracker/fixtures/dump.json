@@ -1,0 +1,131 @@
+[
+{
+  "model": "issuetracker.issue",
+  "pk": 7,
+  "fields": {
+    "summary": "Выполнить проверку приложения",
+    "description": "Мобильное приложение",
+    "status": 1,
+    "created_at": "2022-10-14T10:02:40.636Z",
+    "updated_at": "2022-10-15T06:32:40.110Z",
+    "type": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 8,
+  "fields": {
+    "summary": "Выполнить проверку сайта",
+    "description": "Страница не доступна в поисковике",
+    "status": 1,
+    "created_at": "2022-10-14T10:24:45.919Z",
+    "updated_at": "2022-10-15T06:24:46.672Z",
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 9,
+  "fields": {
+    "summary": "Выполнить проверку приложения",
+    "description": "",
+    "status": 2,
+    "created_at": "2022-10-15T04:56:54.958Z",
+    "updated_at": "2022-10-15T06:32:50.212Z",
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 10,
+  "fields": {
+    "summary": "Выполнить проверку сетевого адаптера",
+    "description": "Комплект Powerline адаптеров TP-Link TL-WPA4220KIT",
+    "status": 2,
+    "created_at": "2022-10-15T04:57:16.224Z",
+    "updated_at": "2022-10-15T06:32:21.410Z",
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "issuetracker.status",
+  "pk": 1,
+  "fields": {
+    "name": "New",
+    "created_at": "2022-10-13T22:17:51.949Z",
+    "updated_at": "2022-10-13T22:17:51.949Z"
+  }
+},
+{
+  "model": "issuetracker.status",
+  "pk": 2,
+  "fields": {
+    "name": "In Progress",
+    "created_at": "2022-10-13T22:18:02.668Z",
+    "updated_at": "2022-10-13T22:18:02.668Z"
+  }
+},
+{
+  "model": "issuetracker.status",
+  "pk": 3,
+  "fields": {
+    "name": "Done",
+    "created_at": "2022-10-13T22:18:07.909Z",
+    "updated_at": "2022-10-13T22:18:07.909Z"
+  }
+},
+{
+  "model": "issuetracker.type",
+  "pk": 1,
+  "fields": {
+    "name": "Task",
+    "created_at": "2022-10-13T22:18:39.334Z",
+    "updated_at": "2022-10-13T22:18:39.334Z"
+  }
+},
+{
+  "model": "issuetracker.type",
+  "pk": 2,
+  "fields": {
+    "name": "Bug",
+    "created_at": "2022-10-13T22:18:44.976Z",
+    "updated_at": "2022-10-13T22:18:44.976Z"
+  }
+},
+{
+  "model": "issuetracker.type",
+  "pk": 3,
+  "fields": {
+    "name": "Enhancement",
+    "created_at": "2022-10-13T22:18:58.697Z",
+    "updated_at": "2022-10-13T22:18:58.697Z"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$IZkL6Q19w6uMiQOzUMyvFI$eMlME/MoyLZJ9FFJh7A+3jl6Q9nWRL4jh5S4QTJcK0s=",
+    "last_login": "2022-10-14T09:49:45.064Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-13T22:13:08.750Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
