@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.button {
+    position: relative;
+    width: 80px;
+    height: 35px;
+    background-color: #202231;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: width .5s,
+    border-radius .5s;
+}
+
+.button * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s;
+}
+
+.icon {
+    opacity: 0;
+}
+
+.button:focus {
+    width: 30px;
+    background-color: #44c08a;
+    border-radius: 50%;
+}
+
+.button:focus .text {
+    opacity: 0;
+}
+
+.button:focus .icon {
+    opacity: 4;
+    transition-delay: .10s;
+}
+
+.material-icons.orange600 {
+    color: #FB8C00;
+    padding: 10px;
+}
+
+.material-icons.red {
+    color: red;
+}
+
+.material-icons.blue {
+    color: blue;
+    padding-left: 28px;
+}
