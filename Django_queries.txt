@@ -1,0 +1,11 @@
+Этап 2:
+
+1.Issue.objects.filter(updated_at__gte=now()-timedelta(days=30), status__name='Done')
+2.Issue.objects.filter(Q(status__in=(1,2)) & Q(type__in=(1,2)))
+3.Issue.objects.filter(Q(summary__icontains='bug') | Q(type__name='Bug')).exclude(status__name='Done')
+
+Этап 2 бонусы:
+
+1.Issue.objects.all().values('id','summary','type__name','status__name')
+2.Issue.objects.filter(summary=F('description'))
+3.Issue.objects.all().values('type').annotate(total=Count('type'))
