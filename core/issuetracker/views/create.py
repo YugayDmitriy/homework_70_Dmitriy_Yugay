@@ -18,5 +18,5 @@ class IssueAddView(TemplateView):
         if form.is_valid():
             issue = form.save()
             messages.info(request, 'Задача успешно добавлена')
-            return redirect('index', pk=issue.pk)
+            return redirect('index')
         return render(request, 'create.html', context={'form': form})
