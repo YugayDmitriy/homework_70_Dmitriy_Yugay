@@ -43,4 +43,4 @@ class ProjectDeleteView(SuccessMessageMixin, DeleteView):
     success_message = "Проект %(summary)s успешно удален"
 
     def get_success_url(self):
-        return reverse('detail_project', kwargs={'pk': self.object.pk})
+        return reverse('index_projects')

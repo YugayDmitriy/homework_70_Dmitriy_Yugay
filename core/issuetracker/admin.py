@@ -2,6 +2,7 @@ from django.contrib import admin
 from issuetracker.models import Issue
 from issuetracker.models import Type
 from issuetracker.models import Status
+from issuetracker.models import Project
 
 
 class IssueAdmin(admin.ModelAdmin):
@@ -23,7 +24,7 @@ class StatusAdmin(admin.ModelAdmin):
     readonly_fields = ('id', 'created_at', 'updated_at')
 
 
-admin.site.register(Status, StatusAdmin)
+admin.site.register(Status)
 
 
 class TypeAdmin(admin.ModelAdmin):
@@ -34,4 +35,15 @@ class TypeAdmin(admin.ModelAdmin):
     readonly_fields = ('id', 'created_at', 'updated_at')
 
 
-admin.site.register(Type, TypeAdmin)
+admin.site.register(Type)
+
+
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'description', 'start_date', 'end_date')
+    list_filter = ('id', 'name', 'description', 'start_date', 'end_date')
+    search_fields = ('name', 'description')
+    fields = ('name', 'description', 'start_date', 'end_date')
+    readonly_fields = ('id', 'start_date', 'end_date')
+
+
+admin.site.register(Project)

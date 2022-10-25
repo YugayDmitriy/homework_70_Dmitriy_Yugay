@@ -1,22 +1,19 @@
-from django.contrib import messages
-from django.shortcuts import redirect, render
-from django.views.generic import TemplateView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.urls import reverse
+from django.views.generic import CreateView
 from issuetracker.forms import IssueForm
+from issuetracker.models import Issue
 
 
-class IssueAddView(TemplateView):
+class IssueAddView(SuccessMessageMixin, CreateView):
     template_name = 'create.html'
+    form_class = IssueForm
+    model = Issue
+    success_message = "Задача %(summary)s успешно добавлена"
 
-    def get(self, request, *args, **kwargs):
-        context = self.get_context_data(**kwargs)
-        form = IssueForm()
-        context['form'] = form
-        return self.render_to_response(context)
+    def form_valid(self, form):
+        form.instance.project_id = self.kwargs['pk']
+        return super(IssueAddView, self).form_valid(form)
 
-    def post(self, request, *args, **kwargs):
-        form = IssueForm(request.POST)
-        if form.is_valid():
-            issue = form.save()
-            messages.info(request, 'Задача успешно добавлена')
-            return redirect('index')
-        return render(request, 'create.html', context={'form': form})
+    def get_success_url(self):
+        return reverse('index')

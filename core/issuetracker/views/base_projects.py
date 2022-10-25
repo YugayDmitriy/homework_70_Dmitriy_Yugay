@@ -10,7 +10,7 @@ class IndexProjectView(ListView):
     template_name = "index_projects.html"
     model = Project
     context_object_name = 'projects'
-    paginate_by = 5
+    paginate_by = 10
     paginate_orphans = 1
 
     def get(self, request, *args, **kwargs):
@@ -36,6 +36,7 @@ class IndexProjectView(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(IndexProjectView, self).get_context_data(object_list=object_list, **kwargs)
+        context.update({'projects': Project.objects.filter(is_deleted=False)})
         context['form'] = self.form
         if self.search_value:
             context['query'] = urlencode({'search': self.search_value})
