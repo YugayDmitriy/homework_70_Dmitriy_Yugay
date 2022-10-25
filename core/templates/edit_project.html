@@ -1,0 +1,14 @@
+{% extends "index_projects.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+        <div class="box">
+           <form action="" method="POST">
+               {% csrf_token%}
+               <div class="form">
+                    {% include 'partials/project_form.html' with button_text='Изменить' %}
+               </div>
+           </form>
+        </div>
+    </div>
+{% endblock %}
