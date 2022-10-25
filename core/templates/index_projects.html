@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% block content %}
+          <div class="mt-5">
+          <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th>
+                     <span class="custom-checkbox">
+					    <input type="checkbox" id="selectAll">
+					    <label for="selectAll"></label>
+					 </span>
+                 </th>
+                 <th scope="col">Вх.№</th>
+                 <th scope="col">Проект</th>
+                 <th scope="col">Подробнее</th>
+             </tr>
+          </thead>
+          <tbody>
+          {% for i in projects %}
+             <tr>
+                 <td>
+                     <span class="custom-checkbox">
+                         <input type="checkbox" id="checkbox1" name="options[]" value="{{issue.id}}">
+                         <label for="checkbox1"></label>
+                     </span>
+                 </td>
+                 <td>{{ forloop.counter }}</td>
+                 <td>{{i.name}}</td>
+                 <td><a href="{% url 'detail_project' i.pk %}" class="view" title="Подробнее" data-toggle="tooltip">
+                     <i class="material-icons blue">&#xE417;</i></a></td>
+             </tr>
+             {% endfor %}
+          </tbody>
+          </table>
+          </div>
+       {% endblock %}
