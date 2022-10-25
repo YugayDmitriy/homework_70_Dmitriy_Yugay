@@ -1,0 +1,323 @@
+[
+{
+  "model": "issuetracker.issue",
+  "pk": 1,
+  "fields": {
+    "summary": "Выполнить проверку приложения",
+    "description": "подготовка программ к отладке и проведения отладки",
+    "status": 2,
+    "project": 1,
+    "created_at": "2022-10-24T11:27:51.767Z",
+    "updated_at": "2022-10-24T11:51:50.174Z",
+    "type": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 3,
+  "fields": {
+    "summary": "Разработать технологию решения",
+    "description": "Решение задачи по всем этапам обработки информации",
+    "status": 1,
+    "project": 1,
+    "created_at": "2022-10-24T11:31:59.810Z",
+    "updated_at": "2022-10-24T11:51:16.343Z",
+    "type": [
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 4,
+  "fields": {
+    "summary": "Осуществить запуск программы",
+    "description": "запуск отлаженных программ и ввод исходных данных",
+    "status": 3,
+    "project": 5,
+    "created_at": "2022-10-24T11:32:14.583Z",
+    "updated_at": "2022-10-24T11:52:40.422Z",
+    "type": [
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 5,
+  "fields": {
+    "summary": "Корректировка разработанной программы на основе анализа",
+    "description": "анализ выходных данных",
+    "status": 2,
+    "project": 2,
+    "created_at": "2022-10-24T11:56:12.387Z",
+    "updated_at": "2022-10-24T11:56:12.388Z",
+    "type": [
+      5
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 6,
+  "fields": {
+    "summary": "Определить возможность использования готовых программных продуктов",
+    "description": "система автоматической проверки правильности программ",
+    "status": 1,
+    "project": 3,
+    "created_at": "2022-10-24T11:56:57.682Z",
+    "updated_at": "2022-10-24T11:56:57.682Z",
+    "type": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 7,
+  "fields": {
+    "summary": "Алгоритмы и структуры",
+    "description": "выбор языка программирования для описания алгоритмов и структур",
+    "status": 2,
+    "project": 3,
+    "created_at": "2022-10-24T11:58:01.090Z",
+    "updated_at": "2022-10-24T11:58:01.090Z",
+    "type": [
+      4
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 8,
+  "fields": {
+    "summary": "ввввввв",
+    "description": "ввввввввв",
+    "status": 2,
+    "project": 2,
+    "created_at": "2022-10-24T11:58:25.370Z",
+    "updated_at": "2022-10-24T11:58:25.370Z",
+    "type": [
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 9,
+  "fields": {
+    "summary": "Определяет информацию, подлежащую обработке средствами вычислительной техники",
+    "description": "ее объемы, структуру, макеты и схемы ввода, обработки, хранения и вывода, методы ее контроля",
+    "status": 2,
+    "project": 4,
+    "created_at": "2022-10-24T11:59:10.613Z",
+    "updated_at": "2022-10-24T11:59:10.613Z",
+    "type": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 10,
+  "fields": {
+    "summary": "фффффффф",
+    "description": "ффффффффффф",
+    "status": 2,
+    "project": 2,
+    "created_at": "2022-10-24T12:00:09.657Z",
+    "updated_at": "2022-10-24T12:00:09.657Z",
+    "type": [
+      4
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 11,
+  "fields": {
+    "summary": "Выполняет работу по унификации и типизации вычислительных процессов",
+    "description": "Срочно",
+    "status": 2,
+    "project": 5,
+    "created_at": "2022-10-24T12:00:47.881Z",
+    "updated_at": "2022-10-24T12:00:47.881Z",
+    "type": [
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "issuetracker.issue",
+  "pk": 12,
+  "fields": {
+    "summary": "пппппппп",
+    "description": "пппппп",
+    "status": 1,
+    "project": 2,
+    "created_at": "2022-10-24T12:01:10.065Z",
+    "updated_at": "2022-10-24T12:01:10.065Z",
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "issuetracker.status",
+  "pk": 1,
+  "fields": {
+    "name": "New",
+    "created_at": "2022-10-24T11:27:15.928Z",
+    "updated_at": "2022-10-24T11:27:15.928Z"
+  }
+},
+{
+  "model": "issuetracker.status",
+  "pk": 2,
+  "fields": {
+    "name": "In Progress",
+    "created_at": "2022-10-24T11:27:23.772Z",
+    "updated_at": "2022-10-24T11:27:23.772Z"
+  }
+},
+{
+  "model": "issuetracker.status",
+  "pk": 3,
+  "fields": {
+    "name": "Done",
+    "created_at": "2022-10-24T11:27:27.334Z",
+    "updated_at": "2022-10-24T11:27:27.334Z"
+  }
+},
+{
+  "model": "issuetracker.type",
+  "pk": 3,
+  "fields": {
+    "name": "Task",
+    "created_at": "2022-10-24T11:26:52.597Z",
+    "updated_at": "2022-10-24T11:26:52.597Z"
+  }
+},
+{
+  "model": "issuetracker.type",
+  "pk": 4,
+  "fields": {
+    "name": "Bug",
+    "created_at": "2022-10-24T11:26:57.646Z",
+    "updated_at": "2022-10-24T11:26:57.646Z"
+  }
+},
+{
+  "model": "issuetracker.type",
+  "pk": 5,
+  "fields": {
+    "name": "Enhancement",
+    "created_at": "2022-10-24T11:27:09.119Z",
+    "updated_at": "2022-10-24T11:27:09.119Z"
+  }
+},
+{
+  "model": "issuetracker.project",
+  "pk": 1,
+  "fields": {
+    "name": "Cистемы нагрузочного тестирования",
+    "description": "aaa,,,,,,,,",
+    "start_date": "2022-01-01",
+    "end_date": "2022-01-01",
+    "is_deleted": true
+  }
+},
+{
+  "model": "issuetracker.project",
+  "pk": 2,
+  "fields": {
+    "name": "Виды программного обеспечения",
+    "description": "виды технических носителей информации",
+    "start_date": "2022-12-15",
+    "end_date": "2023-01-01",
+    "is_deleted": false
+  }
+},
+{
+  "model": "issuetracker.project",
+  "pk": 3,
+  "fields": {
+    "name": "Методы классификации и кодирования информации",
+    "description": "vvvvvvvvvvvvvvvvvvvvvv",
+    "start_date": "2022-11-14",
+    "end_date": "2027-04-01",
+    "is_deleted": false
+  }
+},
+{
+  "model": "issuetracker.project",
+  "pk": 4,
+  "fields": {
+    "name": "Технико-эксплуатационные характеристики",
+    "description": "qqqqqqqqqqqqq",
+    "start_date": "2023-06-20",
+    "end_date": "2028-03-14",
+    "is_deleted": false
+  }
+},
+{
+  "model": "issuetracker.project",
+  "pk": 5,
+  "fields": {
+    "name": "Формализованные языки",
+    "description": "системы счислений, шифров и кодов",
+    "start_date": "2022-01-01",
+    "end_date": "2022-01-01",
+    "is_deleted": true
+  }
+},
+{
+  "model": "issuetracker.project",
+  "pk": 6,
+  "fields": {
+    "name": "eeeeeeeeeeeeeeeeeeeeee",
+    "description": "eeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "start_date": "2022-01-01",
+    "end_date": "2022-01-01",
+    "is_deleted": false
+  }
+},
+{
+  "model": "issuetracker.project",
+  "pk": 7,
+  "fields": {
+    "name": "rrrrrrrrrrrrrrrrrrrrrr",
+    "description": "rrrrrrrrrrrrrrrrrrrrrrrrrrr",
+    "start_date": "2022-01-01",
+    "end_date": "2022-01-01",
+    "is_deleted": false
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$LlRKOtbpEqQ5v8Kh4GcAs5$j4dXqfAalESf4OK1Yz7SqWnPNVubRtEZk7RgYs++Y+A=",
+    "last_login": "2022-10-24T11:25:26.463Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-24T11:25:16.041Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
