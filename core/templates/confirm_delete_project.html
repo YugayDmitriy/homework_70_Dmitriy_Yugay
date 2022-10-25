@@ -1,0 +1,14 @@
+{% extends "index_projects.html" %}
+{% block content %}
+	<div class="modal-body">
+		<p>Вы уверены, что хотите удалить эти записи?</p>
+			<p class="text-warning"><small>После удаления, не возможно восстановить данные</small></p>
+				<div class="modal-footer">
+					<form action="" method="POST">
+					{% csrf_token %}
+					<a href="{% url 'index_projects' %}" class="btn btn-warning">Отменить</a>
+					<input type="submit" class="btn btn-danger" value="Удалить">
+					</form>
+				</div>
+		</div>
+{% endblock %}
