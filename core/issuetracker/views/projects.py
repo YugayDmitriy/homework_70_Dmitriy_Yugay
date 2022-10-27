@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.views.generic import UpdateView, DeleteView, CreateView, DetailView
 from django.contrib.messages.views import SuccessMessageMixin
@@ -17,7 +18,7 @@ class ProjectDetailView(DetailView):
         return context
 
 
-class ProjectAddView(SuccessMessageMixin, CreateView):
+class ProjectAddView(SuccessMessageMixin, LoginRequiredMixin, CreateView):
     template_name = 'create_project.html'
     form_class = ProjectForm
     model = Project
@@ -27,7 +28,7 @@ class ProjectAddView(SuccessMessageMixin, CreateView):
         return reverse('index_projects')
 
 
-class ProjectEditView(SuccessMessageMixin, UpdateView):
+class ProjectEditView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     template_name = 'edit_project.html'
     form_class = ProjectForm
     model = Project
@@ -37,7 +38,7 @@ class ProjectEditView(SuccessMessageMixin, UpdateView):
         return reverse('index_projects')
 
 
-class ProjectDeleteView(SuccessMessageMixin, DeleteView):
+class ProjectDeleteView(SuccessMessageMixin, LoginRequiredMixin,  DeleteView):
     template_name = 'confirm_delete_project.html'
     model = Project
     success_message = "Проект %(summary)s успешно удален"
