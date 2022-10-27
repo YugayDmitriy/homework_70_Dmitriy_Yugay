@@ -8,7 +8,9 @@
                  <th scope="col">Описание проекта</th>
                  <th scope="col">Дата начала</th>
                  <th scope="col">Дата окончания</th>
+                  {% if user.is_authenticated %}
                  <th scope="col">Действия</th>
+                  {% endif %}
              </tr>
           </thead>
           <tbody>
@@ -17,10 +19,12 @@
                  <td>{{project.description}}</td>
                  <td>{{ project.start_date | date:'Y-m-d' }}</td>
                  <td>{{ project.end_date |date:'Y-m-d' }}</td>
+                 {% if user.is_authenticated %}
                  <td>
                      <a href="{% url 'edit_project' project.pk %}" class="edit" title="Изменить" data-toggle="tooltip"><i class="material-icons orange600">&#xE254;</i></a>
                      <a href="{% url 'delete_project' project.pk %}" class="delete" title="Удалить" data-toggle="tooltip"><i class="material-icons red">&#xE872;</i></a>
                  </td>
+                 {% endif %}
              </tr>
           </tbody>
           </table>
@@ -32,7 +36,9 @@
                  <th scope="col">Описание задачи</th>
                  <th scope="col">Статус</th>
                  <th scope="col">Тип</th>
+                  {% if user.is_authenticated %}
                  <th scope="col">Действия</th>
+                  {% endif %}
              </tr>
           </thead>
          {% endif %}
@@ -43,10 +49,12 @@
                  <td>{{issue.description}}</td>
                  <td>{{issue.status}}</td>
                  <td>{% for tag in issue.type.all %} {{tag.name}}{% endfor %}</td>
+                 {% if user.is_authenticated %}
                  <td>
                      <a href="{% url 'edit_issue' issue.pk %}" class="edit" title="Изменить" data-toggle="tooltip"><i class="material-icons orange600">&#xE254;</i></a>
                      <a href="{% url 'delete_issue' issue.pk %}" class="delete" title="Удалить" data-toggle="tooltip"><i class="material-icons red">&#xE872;</i></a>
                  </td>
+                 {% endif %}
              </tr>
           </tbody>
             {% empty %}
@@ -56,10 +64,12 @@
             {% endfor %}
     </table>
       </div>
+    {% if user.is_authenticated %}
     <div class="form-group text-center mt-3">
         <li class="list-group-item list-group-item-light"><a href="{% url 'add_issue' project.pk %}" data-toggle="modal">
                     <span class="material-symbols-outlined green ">difference</span> Добавить задачу</a></li>
     </div>
+    {% endif %}
 {% endblock %}
 
 
