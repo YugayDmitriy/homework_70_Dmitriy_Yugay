@@ -1,10 +1,11 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse
 from django.views.generic import DeleteView
 from issuetracker.models import Issue
 
 
-class IssueDeleteView(SuccessMessageMixin, DeleteView):
+class IssueDeleteView(SuccessMessageMixin, LoginRequiredMixin, DeleteView):
     template_name = 'delete_confirm.html'
     model = Issue
     success_message = "Задача %(summary)s успешно удалена"
