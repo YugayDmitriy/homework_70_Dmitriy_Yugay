@@ -16,16 +16,27 @@
     <div class="container mt-4">
           <div class="table-title alert alert-warning">
 				<div class="row">
-					<div class="col-sm-7">
+					<div class="col-sm-5">
 						<h2>Manage <b>Issue Tracker</b></h2>
 					</div>
+                    {% if user.is_authenticated %}
 					<div class="col-sm-4">
                         {% include 'partials/search.html' %}
                     </div>
+                    <li>Приветствуем {{ user.username }}</li>
                     <div class="col-sm-1">
-                        <a href="#" class="btn btn-success" data-toggle="modal">
+                        <a href="{% url 'logout' %}" class="btn btn-success" data-toggle="modal">
+                            <span class="material-symbols-outlined">logout</span></a>
+                    </div>
+                    {% else %}
+                    <div class="col-sm-6">
+                        {% include 'partials/search.html' %}
+                    </div>
+                    <div class="col-sm-1">
+                        <a href="{% url 'login' %}?next=" class="btn btn-success" data-toggle="modal">
                             <span class="material-symbols-outlined">login</span></a>
                     </div>
+                    {% endif %}
 				</div>
 			</div>
           {% if messages %}
@@ -67,8 +78,10 @@
             <h3>Разделы</h3>
             <p class='text-muted'>Действия
               <ul class="list-group">
+              {% if user.is_authenticated %}
                 <li class="list-group-item list-group-item-light"><a href="{% url 'add_project' %}" data-toggle="modal">
                     <span class="material-symbols-outlined green">difference</span> Добавить проект</a></li>
+              {% endif %}
                 <li class="list-group-item list-group-item-light"><a href="{% url 'index' %}" data-toggle="modal">
                     <span class="material-symbols-outlined green">checklist</span> Список задач </a></li>
                 <li class="list-group-item list-group-item-light"><a href="{% url 'index_projects' %}" data-toggle="modal">

@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse
 from django.views.generic import CreateView
@@ -5,7 +6,7 @@ from issuetracker.forms import IssueForm
 from issuetracker.models import Issue
 
 
-class IssueAddView(SuccessMessageMixin, CreateView):
+class IssueAddView(SuccessMessageMixin, LoginRequiredMixin, CreateView):
     template_name = 'create.html'
     form_class = IssueForm
     model = Issue
