@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'issuetracker',
     'crispy_forms',
-    'accounts'
+    'accounts',
+    'api'
 ]
 
 # django-crispy-forms
